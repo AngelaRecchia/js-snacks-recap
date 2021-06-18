@@ -4,6 +4,15 @@ Usiamo i nuovi metodi degli array foreach o filter. */
 
 const arr = [2,4,7,3,8,55,7,433,5,77,2,3,4,5,23,4545,7676,4343,11,66,3];
 let a = 1;
-let z = 3;
+let z = 7;
+
+// taglia con filter
 console.log(arr.filter((elem, i) => i>= a && i<= z ));
+
+// taglia con forEach
+const cutArr = []
+arr.forEach((elem, i) =>  {
+    if (i>= a && i<= z) cutArr.push(elem);
+});
+console.log(cutArr);
 
